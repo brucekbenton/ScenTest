@@ -1,0 +1,24 @@
+
+<div id="projectOutline" ng-if="currentView==1" class="activePanel">
+    <div class="title">Project Group</div>
+    <div class="gridContainter">
+    <div class="gridContentFrame">
+    <div class="gridHeader">
+        <div class="expanderCol"> </div>
+        <div class="nameHeaderCol">Module</div>
+        <div class="ownerHeaderCol">Owner</div>
+        <div  class="descriptionHeaderCol">Description</div>
+        <div class="coverageCol">Coverage</div>
+        <div class="controlCol"></div>
+    </div>
+    <div class="outlineContentFrame">      
+        <div *ngFor="let node of currentProject.modules">
+            <node [nodeData]="node" [depth]="depth" (module)="getModule($event)"></node>
+        </div>
+    </div>
+    </div>
+    </div>
+    <scenario-outline [currentModule]="currentModule"></scenario-outline>
+</div>
+
+        

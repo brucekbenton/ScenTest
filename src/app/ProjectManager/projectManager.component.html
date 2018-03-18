@@ -1,0 +1,34 @@
+<div class="applicationPanel">
+    <div>
+        <div class="sectionLabel shortLabel">Projects</div>
+        <div  *ngIf="!insertProject" class="rightDiv">
+            <button title="Click to add new project to current project group" [disabled]="false" class="addButton" (click)="addProjectHandler()">Add</button>
+        </div>
+        <div *ngIf="insertProject" class="rightDiv">
+            <button title="Click to cancel current add project action" [disabled]="true" class="cancelButton" (click)="cancelProjectHandler()">Cancel</button>
+            <button title="Click to save new project to current project group" class="saveButton" (click)="saveProjectHandler()">Save</button>
+        </div>
+    </div>
+    <div class="projectPanel">
+        <div *ngFor="let project of projectGroups[0].projects" class="sectionItem " [ngClass]="{'checked': project.id === currentProject.id}" (click)="selectProjectHandler(project)">
+            <div >{{project.name}}</div>
+        </div>
+
+    </div>
+    <div class="projectDetailPanel">
+        <div class="sectionLabel">Owner</div>
+        <div class="sectionContent"><input class="projectInput" [ngModel]="currentProject.owner" ></div>
+        <div class="sectionLabel">Description</div>
+        <div class="sectionContentMultiline">
+            <textarea class="projectDesriptionInput" [ngModel]="currentProject.description" ></textarea>
+        </div>
+    </div>
+        <!-- Add the navigation buttons-->
+        <button class="navigationButton" [disabled]="currentView ==1 || activePanel" (click)="selectView(1)" [ngClass]="{'activeButton': currentView == 1}">Project Outline</button>
+        <button class="navigationButton" [disabled]="currentView ==2 || activePanel" (click)="selectView(2)" [ngClass]="{'activeButton': currentView == 2}">Test Outline</button>
+        <button ng-if="false" class="navigationButton buttonDisabled" [disabled]="true" (click)="selectView(3)" [ngClass]="{'activeButton': currentView == 3}">Test Cases</button>
+        <button class="navigationButton " [disabled]="false" (click)="selectView(4)" [ngClass]="{'activeButton': currentView == 4}">Defects</button>
+        <button ng-if="false" class="navigationButton  " [disabled]="false" >Test Results</button>
+        <button class="configButton" [ngClass]="{'buttonDisabled':!isDirty}" [disabled]="!isDirty || activePanel" (click)="updateFileHandler()">Save Data</button>
+        <button class="navigationButton" [disabled]="activePanel"  (click)="configModeHandler()">Configuration</button>
+</div>

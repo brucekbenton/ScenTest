@@ -1,0 +1,201 @@
+
+.gridContainer{
+    float:left;
+    width:1290px;
+    height:500px;
+    border: solid 2px gray;
+}
+
+.gridFrame {
+    width:1245px;
+    height:30px;
+}
+
+.gridContentFrame {
+    width:1290px;
+    height:470px;
+    overflow:auto;
+    border:solid 1px gray;
+}
+
+div.gridContainer>div.gridRow:nth-child(odd){
+    background-color: lightgray;
+    color:red;
+}
+
+gridContainer div:nth-child(odd){
+    background-color: lightgray;
+    color:green;
+}
+
+.gridHeader {
+    float: left;
+    width: 1290px;
+    height:30px;
+    background-color: #ff9933;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gridRow {
+    float: left;
+    width: 1290px;
+    min-height:30px;
+    height:auto;
+    color:black;
+    border-bottom:solid 1px gray;
+}
+
+.virtualRow{
+    border:solid 1px blue;
+}
+
+
+
+.row0 {
+    background-color: white;
+}
+
+.row1 {
+    background-color: lightgray;
+}
+
+.highlightRow{
+    /*background:rgba(128,193,229,1);*/
+    background: #0099cc;
+    color:white;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.expanderCol{
+    float:left;
+    width:25px;
+    min-width:25px;
+    min-height:25px;
+    padding-left:10px;
+    box-sizing:border-box;
+    cursor:pointer;
+}
+
+.nameHeaderCol{
+    float:left;
+    width:225px;
+    min-height:25px;
+    height:auto;
+    margin-left:5px;
+    font-family:inherit;
+    font-weight:bold;
+    border:solid 0px;
+ }
+
+.ownerHeaderCol {
+    float: left;
+    width: 125px;
+    margin-left:5px;
+    font-family:inherit;
+    font-size:18px;
+    border:solid 0px;
+}
+
+.descriptionHeaderCol {
+    float: left;
+    width: 475px;
+    margin-left:5px;
+    font-family:inherit;
+    font-size:18px;
+    border:solid 0px;
+}
+
+.coverageCol {
+    float: left;
+    max-width: 75px;
+    min-width: 75px;
+    font-family:inherit;
+   
+}
+.controlCol {
+    float: right;
+    margin-right:0px;
+    width: 225px;
+    padding-top:0px;
+    padding-bottom:5px;
+    vertical-align:middle;
+}
+
+.indent1 {
+    padding-left: 10px;
+}
+
+.indent2 {
+    padding-left: 30px;
+}
+
+.indent3 {
+    padding-left: 50px;
+}
+
+.indent4 {
+    padding-left: 70px;
+}
+
+       .outlineButton {
+           display:inline-block;
+            border-radius: 10px;
+            margin-top:0px;
+            background-color: #ff9933;
+            color: white;
+            width: 70px;
+            height: 25px;
+            font-size: medium;
+            font-weight: bold;
+            border-width: 0px;
+        }
+
+       .testButton {
+           display:inline-block;
+            border-radius: 10px;
+            padding-left:5px;
+            margin-left:5px;
+            margin-top:5px;
+            padding-top:0px;
+            margin-bottom:5px;
+            padding-bottom:5px;
+            background-color: #ff9933;
+            color: white;
+            width: 30px;
+            height: 20px;
+            font-size: x-large;
+            font-weight: bold;
+            border-width: 0px;
+        }
+
+.newNodeButton {
+            display:inline-block;
+            border-radius: 10px;
+            background-color: #ff9933;
+            margin-left:5px;
+            color: white;
+            width: 70px;
+            height: 20px;
+            font-weight: bold;
+            border-width: 0px;
+        }
+
+.editButton {
+            display:inline-block;
+            border-radius: 10px;
+            background-color: #ff9933;
+            color: white;
+            width: 50px;
+            height: 20px;
+            font-weight: bold;
+            border-width: 0px;
+        }
+
+
+

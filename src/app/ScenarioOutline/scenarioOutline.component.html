@@ -1,0 +1,22 @@
+<div class="moduleOutlineFrame">
+    <div class="outlineHeader">
+        <div class="idCol">ID</div>
+        <div class="scenarioCol">Scenario</div>
+        <div class="priorityCol">Priority</div>
+    </div>
+    <div class="outlineContentFrame">
+        <div class="outlineRow" *ngFor="let scenario of currentModule.scenarios">
+            <div class="outlineRow" >
+                <div class="idCol">{{scenario.id}}</div>
+                <div><input class="scenarioInput" [attr.disabled]="'disabled'" [ngModel]="scenario.scenario" /></div>
+                <div><input class="priorityInput" [attr.disabled]="'disabled'" [ngModel]="scenario.priority" /></div>
+                <div *ngIf="false" style="float:left;">
+                    <button title="Click to cancel current add scenario action" class="cancelButton" (click)="cancelScenarioInsertHandler()">Cancel</button>
+                    <button title="Click to save the new scenario record" class="saveButton" (click)="insertScenario($event)">Save</button>
+                </div>
+            </div>
+        </div>
+     </div>
+    <div><button  title="Click to add a new functional scenario" class="newScenarioButton" ng-disabled="currentModule==undefined" (click)="addEmptyScenarioHandler()">Add Scenario</button></div>
+
+</div>

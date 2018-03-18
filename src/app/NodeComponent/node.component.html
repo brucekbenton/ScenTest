@@ -1,0 +1,22 @@
+<div>
+    <div class="gridRow" (click)="selectModule(nodeData,$event)">
+        <div class="expanderCol"> </div>
+        <div class="nameCol" ><input class="nameInputCol" [ngStyle]="{'padding-left':depth+'px','width':220-depth+'px'}" [ngClass]="{'border':isEdit}" [attr.disabled]="!isEdit?'disabled':null" [(ngModel)]="nodeData.name"/></div>
+        <div class="ownerCol"  ><input class="ownerInputCol" [ngClass]="{'border':isEdit}" [attr.disabled]="!isEdit?'disabled':null" [(ngModel)]="nodeData.owner"></div>
+        <div class="descriptionCol"><input class="descriptionInputCol" [ngClass]="{'border':isEdit}" [attr.disabled]="!isEdit?'disabled':null" [(ngModel)]="nodeData.description"></div>
+        <div class="coverageCol">{{nodeData.coverage}}</div>
+        <div class="controlCol" ng-if="!moduleEditMode">
+
+            <button *ngIf="!isEdit" title="Click to edit the current module row" class="editButton" (click)="editModuleHandler(nodeData)">Edit</button>
+            <button *ngIf="isEdit" title="Click to save the current changes" class="editButton" (click)="saveModuleHandler(nodeData,$event)">Save</button>
+
+            <button ng-if="true" title="Click to delete the current module" class="newNodeButton" (click)="deleteModuleHandler(nodeData,$event)">Delete</button>
+            <button title="Click to add a child module to the current module" class="newNodeButton" (click)="addNodeHandler(nodeData)">+Node</button>
+        </div>
+</div>
+
+    <div *ngFor="let childNode of nodeData.modules">
+        <node [nodeData]="childNode" [depth]="depth" (click)="selectModule(childNode,$event)"></node>
+    </div>
+
+</div>

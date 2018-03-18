@@ -1,0 +1,60 @@
+
+.nameCol{
+    float:left;
+    width:225px;
+    min-height:25px;
+    height:auto;
+    margin-left:5px;
+ }
+
+ .nameInputCol{
+    float:left;
+    width:220px;
+    min-height:25px;
+    height:auto;
+    padding-left:0px;
+    font-family:inherit;
+    font-weight:bold;
+    border:solid 0px;
+ }
+
+ .ownerCol {
+    float: left;
+    width: 125px;
+    min-height:25px;
+    height:auto;
+    margin-left:5px;
+    border:solid 0px;
+}
+
+.ownerInputCol {
+    float: left;
+    width: 100px;
+    min-height:25px;
+    height:auto;
+    font-family:inherit;
+    font-size:18px;
+    border:solid 0px;
+}
+.descriptionCol {
+    float: left;
+    width: 475px;
+    min-height:25px;
+    height:auto;
+    margin-left:5px;
+    border:solid 0px;
+}
+
+.descriptionInputCol {
+    float: left;
+    width: 450px;
+    min-height:25px;
+    height:auto;
+    font-family:inherit;
+    font-size:18px;
+    border:solid 0px;
+}
+
+.border{
+    border:solid 2px gray;
+}
